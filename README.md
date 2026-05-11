@@ -168,7 +168,7 @@ olg_2026
 ```bash
 git clone https://github.com/SamChrstopher/offer-letter-generator.git
 
-cd OfferLetter-Generator
+cd offer-letter-generator
 ```
 
 ---
