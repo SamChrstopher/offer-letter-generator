@@ -1,0 +1,26 @@
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    z-index: 1000;
+
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.25s ease;
+}
+
+.back-arrow:hover {
+    transform: translateX(-4px);
+    background-color:  #059185;
+    color: #ffffff;
+}

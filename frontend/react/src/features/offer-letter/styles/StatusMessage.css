@@ -1,0 +1,17 @@
+.status {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.status.loading {
+  color: #4f46e5;
+}
+
+.status.error {
+  color: red;
+}
+
+.status.success {
+  color: green;
+}

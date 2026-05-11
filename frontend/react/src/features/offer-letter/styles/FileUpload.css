@@ -1,0 +1,25 @@
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.file-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #6b7280;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed #c7d2fe;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.file-input:hover {
+  background: #eef2ff;
+}

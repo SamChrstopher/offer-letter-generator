@@ -1,0 +1,263 @@
+/* ===============================
+   FULL PAGE CONTAINER
+================================= */
+.full-container {
+  width: 100%;
+  height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  font-family: "Segoe UI", sans-serif;
+
+}
+
+/* ===============================
+   HEADER SECTION
+================================= */
+.results-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.results-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ===============================
+   BACK BUTTON
+================================= */
+.back-arrow2 {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #e0f2fe;
+  font-size: 18px;
+  cursor: pointer;
+  color: #0284c7;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-arrow2:hover {
+  background: #0d9484;
+  color: white;
+  transform: scale(1.05);
+}
+
+.back-arrow2:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   SCROLL AREA
+================================= */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 40px;
+  scroll-behavior: smooth;
+  margin-bottom: 100px;
+}
+
+/* Scrollbar */
+.scroll-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(2, 132, 199, 0.4);
+  border-radius: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 132, 199, 0.7);
+}
+
+/* ===============================
+   RESULT ITEM CARD
+================================= */
+.results-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.25s ease;
+  box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.results-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Candidate name */
+.results-item span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+/* ===============================
+   DOWNLOAD BUTTON
+================================= */
+.download-btn {
+  background: linear-gradient(135deg, #0d9484, #04685f);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0px 6px 14px rgba(2, 132, 199, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover */
+.download-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0px 10px 18px rgba(2, 132, 199, 0.35);
+}
+
+/* Click */
+.download-btn:active {
+  transform: scale(0.95);
+}
+
+/* Shine effect */
+.download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.download-btn:hover::before {
+  left: 120%;
+}
+
+/* Disabled */
+.download-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===============================
+   LOADER DESIGN
+================================= */
+.loader-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-box {
+  text-align: center;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0px 10px 25px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.loader-box p {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.spinner {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 6px solid rgba(2, 132, 199, 0.15);
+  border-top: 6px solid #0284c7;
+  animation: spin 0.9s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===============================
+   EMPTY STATE DESIGN
+================================= */
+.empty-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-box {
+  text-align: center;
+  padding: 40px 50px;
+  max-width: 480px;
+  margin-bottom: 100px;
+}
+
+.empty-box h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.empty-box p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Empty button */
+.button {
+  background: linear-gradient(135deg, #0284c7, #0d9488);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0px 8px 18px rgba(2, 132, 199, 0.25);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 22px rgba(2, 132, 199, 0.35);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
